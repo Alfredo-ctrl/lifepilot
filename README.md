@@ -50,6 +50,24 @@ You can also open `index.html` directly.
 
 ## Run The Terminal App
 
+Install it from GitHub as a real terminal command:
+
+```bash
+npm install -g Alfredo-ctrl/lifepilot
+```
+
+Then run:
+
+```bash
+lifepilot
+```
+
+Try the demo:
+
+```bash
+lifepilot --demo
+```
+
 Interactive mode:
 
 ```bash
@@ -68,11 +86,17 @@ Export JSON:
 python lifepilot.py --file examples/day.txt --json
 ```
 
+The npm command uses the JavaScript CLI. The Python command stays available for people who prefer running the local script directly.
+
 ## Project Structure
 
 ```text
 lifepilot/
   index.html
+  package.json
+  bin/
+    lifepilot.js
+    postinstall.js
   lifepilot.py
   src/
     app.js
