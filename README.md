@@ -53,7 +53,7 @@ You can also open `index.html` directly.
 Install it from GitHub as a real terminal command:
 
 ```bash
-npm install -g Alfredo-ctrl/lifepilot
+npm install -g --foreground-scripts https://github.com/Alfredo-ctrl/lifepilot/archive/refs/heads/main.tar.gz
 ```
 
 Then run:
