@@ -14,9 +14,11 @@ const ink = {
   reset: "\x1b[0m",
   dim: "\x1b[2m",
   bold: "\x1b[1m",
+  cyan: "\x1b[36m",
   green: "\x1b[32m",
   blue: "\x1b[34m",
   yellow: "\x1b[33m",
+  magenta: "\x1b[35m",
   gray: "\x1b[90m"
 };
 
@@ -62,7 +64,7 @@ async function getInput(config) {
 
 function readInteractive() {
   printShellHeader();
-  console.log(paint("Paste your tasks. Press Enter on an empty line to build the day.", "gray"));
+  console.log(paint("Drop your messy task list here. Empty line = build the day.", "gray"));
   console.log("");
 
   const rl = readline.createInterface({
@@ -118,15 +120,19 @@ function renderPlan(plan) {
 
 function printShellHeader() {
   const brand = [
-    "o----o",
-    "     \\",
-    "      o"
+    "        .",
+    "   .----+----.",
+    "  /     |     \\",
+    " .      |      .",
+    "        ."
   ];
 
   console.log("");
-  console.log(`${paint(brand[0], "green")}  ${paint("lifepilot", "bold")} ${paint(`v${pkg.version}`, "gray")}`);
-  console.log(`${paint(brand[1], "green")}  ${paint("a calm planner for messy days", "gray")}`);
-  console.log(`${paint(brand[2], "green")}`);
+  console.log(`${paint(brand[0], "cyan")}  ${paint("lifepilot", "bold")} ${paint(`v${pkg.version}`, "gray")}`);
+  console.log(`${paint(brand[1], "green")}  ${paint("plan the day without fighting your brain", "gray")}`);
+  console.log(`${paint(brand[2], "yellow")}  ${paint("type tasks, get a calm schedule", "gray")}`);
+  console.log(`${paint(brand[3], "magenta")}  ${paint("try:", "gray")} ${paint("lifepilot --demo", "bold")}`);
+  console.log(`${paint(brand[4], "blue")}`);
   console.log("");
 }
 
@@ -173,7 +179,7 @@ function printHelp() {
   console.log("  --json              Print the full plan as JSON");
   console.log("");
   console.log("Install from GitHub");
-  console.log("  npm install -g Alfredo-ctrl/lifepilot");
+  console.log("  npm install -g --foreground-scripts https://github.com/Alfredo-ctrl/lifepilot/archive/refs/heads/main.tar.gz");
   console.log("  lifepilot --demo");
   console.log("");
 }
