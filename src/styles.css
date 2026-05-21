@@ -71,16 +71,47 @@ button {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--ink), var(--blue));
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 800;
+.route-mark {
+  position: relative;
+  width: 58px;
+  height: 34px;
+}
+
+.route-mark::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 50%;
+  height: 3px;
+  background: var(--ink);
+  transform: translateY(-50%);
+}
+
+.route-mark i {
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+  transform: translateY(-50%);
+}
+
+.route-mark i:nth-child(1) {
+  left: 0;
+}
+
+.route-mark i:nth-child(2) {
+  left: 50%;
+  border-color: var(--blue);
+  transform: translate(-50%, -50%);
+}
+
+.route-mark i:nth-child(3) {
+  right: 0;
+  border-color: var(--green);
 }
 
 .brand strong,
