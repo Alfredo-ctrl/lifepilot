@@ -1,0 +1,21 @@
+{
+  "name": "lifepilot",
+  "version": "1.0.0",
+  "description": "A friendly daily planning app that turns messy tasks into a clear schedule.",
+  "private": false,
+  "scripts": {
+    "start": "python -m http.server 5174",
+    "check": "node --check src/planner.js && node --check src/app.js && python -m py_compile lifepilot.py"
+  },
+  "keywords": [
+    "productivity",
+    "planner",
+    "calendar",
+    "task-management",
+    "personal-assistant",
+    "web-app",
+    "cli"
+  ],
+  "author": "Alfredo Oliva",
+  "license": "MIT"
+}
