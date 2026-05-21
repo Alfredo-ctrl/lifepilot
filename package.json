@@ -1,6 +1,6 @@
 {
   "name": "lifepilot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A friendly daily planning app that turns messy tasks into a clear schedule.",
   "private": false,
   "bin": {
@@ -18,7 +18,7 @@
   "scripts": {
     "start": "python -m http.server 5174",
     "cli": "node bin/lifepilot.js",
-    "postinstall": "node bin/postinstall.js",
+    "postinstall": "node -e \"console.log('\\nlifepilot is ready.\\n\\nTry it in your terminal:\\n  lifepilot --demo\\n  lifepilot\\n')\"",
     "check": "node --check src/planner.js && node --check src/app.js && node --check bin/lifepilot.js && node --check bin/postinstall.js && python -m py_compile lifepilot.py"
   },
   "keywords": [
