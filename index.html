@@ -10,47 +10,43 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#">
-      <span class="route-mark">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
       <span>
-        <strong>lifepilot</strong>
-        <small>Plan the day you actually have</small>
+        <strong data-i18n="brand">lifepilot</strong>
+        <small data-i18n="tagline">Plan the day you actually have</small>
       </span>
     </a>
     <nav class="top-actions">
-      <button id="sample-btn" type="button">Load sample</button>
-      <button id="copy-btn" type="button">Copy plan</button>
-      <button id="json-btn" type="button">Export JSON</button>
+      <button class="language-switch" type="button" aria-label="Switch language" aria-pressed="false"><span>EN</span><i></i><span>ES</span></button>
+      <button id="sample-btn" type="button" data-i18n="loadSample">Load sample</button>
+      <button id="copy-btn" type="button" data-i18n="copyPlan">Copy plan</button>
+      <button id="json-btn" type="button" data-i18n="exportJson">Export JSON</button>
     </nav>
   </header>
 
   <main class="shell">
-    <section class="planner">
+    <section class="planner" data-reveal>
       <aside class="input-panel">
         <div class="panel-title">
-          <p>Start here</p>
-          <h1>Drop the messy list. Get a clear day.</h1>
+          <p data-i18n="startHere">Start here</p>
+          <h1 data-i18n="headline">Drop the messy list. Get a clear day.</h1>
         </div>
 
         <label class="field">
-          <span>Brain dump</span>
+          <span data-i18n="brainDump">Brain dump</span>
           <textarea id="task-input" rows="13" spellcheck="false"></textarea>
         </label>
 
         <div class="controls">
           <label class="field">
-            <span>Day starts</span>
+            <span data-i18n="dayStarts">Day starts</span>
             <input id="start-time" type="time" value="08:00">
           </label>
           <label class="field">
-            <span>Day ends</span>
+            <span data-i18n="dayEnds">Day ends</span>
             <input id="end-time" type="time" value="22:30">
           </label>
           <label class="field">
-            <span>Mode</span>
+            <span data-i18n="mode">Mode</span>
             <select id="mode-select">
               <option value="balanced">Balanced</option>
               <option value="student">Student</option>
@@ -59,7 +55,7 @@
             </select>
           </label>
           <label class="field">
-            <span>Break rhythm</span>
+            <span data-i18n="breakRhythm">Break rhythm</span>
             <select id="break-select">
               <option value="normal">Normal</option>
               <option value="deep">Deep focus</option>
@@ -68,25 +64,25 @@
           </label>
         </div>
 
-        <button class="primary" id="plan-btn" type="button">Build my plan</button>
+        <button class="primary" id="plan-btn" type="button" data-i18n="buildPlan">Build my plan</button>
       </aside>
 
       <section class="result-panel">
         <div class="today-strip">
           <div>
-            <span>Today plan</span>
+            <span data-i18n="todayPlan">Today plan</span>
             <strong id="plan-date">Ready</strong>
           </div>
           <div class="score-card">
-            <span>Load</span>
+            <span data-i18n="load">Load</span>
             <strong id="load-score">--</strong>
           </div>
           <div class="score-card">
-            <span>Focus blocks</span>
+            <span data-i18n="focusBlocks">Focus blocks</span>
             <strong id="focus-count">--</strong>
           </div>
           <div class="score-card">
-            <span>Free time</span>
+            <span data-i18n="freeTime">Free time</span>
             <strong id="free-time">--</strong>
           </div>
         </div>
@@ -98,7 +94,7 @@
         <div class="columns">
           <section class="timeline-panel">
             <div class="section-head">
-              <h2>Timeline</h2>
+              <h2 data-i18n="timeline">Timeline</h2>
               <span id="timeline-count">0 blocks</span>
             </div>
             <div id="timeline" class="timeline"></div>
@@ -106,12 +102,12 @@
 
           <section class="insights-panel">
             <div class="section-head">
-              <h2>Tasks</h2>
+              <h2 data-i18n="tasks">Tasks</h2>
               <span id="task-count">0 items</span>
             </div>
             <div id="task-list" class="task-list"></div>
             <div class="section-head second">
-              <h2>Suggestions</h2>
+              <h2 data-i18n="suggestions">Suggestions</h2>
               <span id="suggestion-count">0 notes</span>
             </div>
             <div id="suggestions" class="suggestions"></div>

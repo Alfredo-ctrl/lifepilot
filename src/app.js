@@ -32,6 +32,83 @@ const el = {
 };
 
 let currentPlan = null;
+let uiLang = "en";
+
+const uiCopy = {
+  en: {
+    brand: "lifepilot",
+    tagline: "Plan the day you actually have",
+    loadSample: "Load sample",
+    copyPlan: "Copy plan",
+    exportJson: "Export JSON",
+    startHere: "Start here",
+    headline: "Drop the messy list. Get a clear day.",
+    brainDump: "Brain dump",
+    dayStarts: "Day starts",
+    dayEnds: "Day ends",
+    mode: "Mode",
+    breakRhythm: "Break rhythm",
+    buildPlan: "Build my plan",
+    todayPlan: "Today plan",
+    load: "Load",
+    focusBlocks: "Focus blocks",
+    freeTime: "Free time",
+    timeline: "Timeline",
+    tasks: "Tasks",
+    suggestions: "Suggestions",
+    emptyBrief: "Type a few things you need to do, then build a plan.",
+    blocks: "blocks",
+    items: "items",
+    notes: "notes",
+    copied: "Plan copied.",
+    copyFailed: "Copy failed. Select and copy manually.",
+    exported: "JSON exported.",
+    sampleLoaded: "Sample loaded."
+  },
+  es: {
+    brand: "lifepilot",
+    tagline: "Planea el dia que si tienes",
+    loadSample: "Cargar ejemplo",
+    copyPlan: "Copiar plan",
+    exportJson: "Exportar JSON",
+    startHere: "Empieza aqui",
+    headline: "Pega tu lista caotica. Recibe un dia claro.",
+    brainDump: "Lista libre",
+    dayStarts: "Inicio",
+    dayEnds: "Final",
+    mode: "Modo",
+    breakRhythm: "Ritmo de pausas",
+    buildPlan: "Crear mi plan",
+    todayPlan: "Plan de hoy",
+    load: "Carga",
+    focusBlocks: "Bloques foco",
+    freeTime: "Tiempo libre",
+    timeline: "Agenda",
+    tasks: "Tareas",
+    suggestions: "Sugerencias",
+    emptyBrief: "Escribe algunas cosas por hacer y genera tu plan.",
+    blocks: "bloques",
+    items: "tareas",
+    notes: "notas",
+    copied: "Plan copiado.",
+    copyFailed: "No se pudo copiar. Selecciona y copia manualmente.",
+    exported: "JSON exportado.",
+    sampleLoaded: "Ejemplo cargado."
+  }
+};
+
+function applyUiLanguage(nextLang) {
+  uiLang = nextLang;
+  document.documentElement.lang = uiLang;
+  const toggle = document.querySelector(".language-switch");
+  if (toggle) toggle.setAttribute("aria-pressed", String(uiLang === "es"));
+  document.querySelectorAll("[data-i18n]").forEach(node => {
+    const value = uiCopy[uiLang][node.dataset.i18n];
+    if (value) node.textContent = value;
+  });
+  if (currentPlan) render(currentPlan);
+  else el.brief.textContent = uiCopy[uiLang].emptyBrief;
+}
 
 function build() {
   currentPlan = LifePilot.planDay(el.input.value, {
@@ -44,15 +121,16 @@ function build() {
 }
 
 function render(plan) {
-  const date = new Intl.DateTimeFormat("en-US", { weekday: "long", month: "short", day: "numeric" }).format(new Date());
+  const locale = uiLang === "es" ? "es-MX" : "en-US";
+  const date = new Intl.DateTimeFormat(locale, { weekday: "long", month: "short", day: "numeric" }).format(new Date());
   el.date.textContent = date;
   el.load.textContent = `${plan.summary.load}%`;
   el.focus.textContent = plan.summary.focusBlocks;
   el.free.textContent = LifePilot.formatDuration(plan.summary.openMinutes);
   el.brief.textContent = plan.summary.brief;
-  el.timelineCount.textContent = `${plan.timeline.length} blocks`;
-  el.taskCount.textContent = `${plan.tasks.length} items`;
-  el.suggestionCount.textContent = `${plan.summary.suggestions.length} notes`;
+  el.timelineCount.textContent = `${plan.timeline.length} ${uiCopy[uiLang].blocks}`;
+  el.taskCount.textContent = `${plan.tasks.length} ${uiCopy[uiLang].items}`;
+  el.suggestionCount.textContent = `${plan.summary.suggestions.length} ${uiCopy[uiLang].notes}`;
   renderTimeline(plan.timeline);
   renderTasks(plan.tasks);
   renderSuggestions(plan.summary.suggestions);
@@ -104,8 +182,8 @@ function renderSuggestions(suggestions) {
 function copyPlan() {
   if (!currentPlan) build();
   navigator.clipboard.writeText(currentPlan.text)
-    .then(() => showToast("Plan copied."))
-    .catch(() => showToast("Copy failed. Select and copy manually."));
+    .then(() => showToast(uiCopy[uiLang].copied))
+    .catch(() => showToast(uiCopy[uiLang].copyFailed));
 }
 
 function exportJson() {
@@ -119,7 +197,7 @@ function exportJson() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  showToast("JSON exported.");
+  showToast(uiCopy[uiLang].exported);
 }
 
 function showToast(message) {
@@ -144,10 +222,22 @@ el.plan.addEventListener("click", build);
 el.sample.addEventListener("click", () => {
   el.input.value = sample;
   build();
-  showToast("Sample loaded.");
+  showToast(uiCopy[uiLang].sampleLoaded);
 });
 el.copy.addEventListener("click", copyPlan);
 el.json.addEventListener("click", exportJson);
 [el.start, el.end, el.mode, el.breaks].forEach(input => input.addEventListener("change", build));
+document.querySelector(".language-switch")?.addEventListener("click", () => {
+  applyUiLanguage(uiLang === "en" ? "es" : "en");
+});
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("is-visible");
+  });
+}, { threshold: 0.16 });
+
+document.querySelectorAll("[data-reveal]").forEach(node => revealObserver.observe(node));
+applyUiLanguage(uiLang);
 el.input.value = sample;
 build();
