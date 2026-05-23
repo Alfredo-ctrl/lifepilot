@@ -29,6 +29,9 @@
         <div class="panel-title">
           <p data-i18n="startHere">Start here</p>
           <h1 data-i18n="headline">Drop the messy list. Get a clear day.</h1>
+          <div class="parallax-frame plan-parallax" aria-hidden="true">
+            <img src="assets/parallax-plan.svg" alt="" data-parallax data-orientation="down right" data-scale="1.18" data-delay="0.7">
+          </div>
         </div>
 
         <label class="field">
@@ -118,6 +121,8 @@
   </main>
 
   <div id="toast" class="toast" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+  <script src="src/parallax.js"></script>
   <script src="src/planner.js"></script>
   <script src="src/app.js"></script>
 </body>
