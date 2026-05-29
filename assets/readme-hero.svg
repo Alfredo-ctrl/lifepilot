@@ -1,0 +1,13 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LifePilot banner">
+  <rect width="1200" height="360" rx="34" fill="#fff9e8"/>
+  <path d="M0 310 C180 220 310 395 510 286 C706 180 872 336 1200 170" stroke="#ffb703" stroke-width="2" opacity=".28"/>
+  <path d="M0 58 H1200 M120 0 V360 M280 0 V360 M440 0 V360 M600 0 V360 M760 0 V360 M920 0 V360 M1080 0 V360" stroke="#1b263b" opacity=".08"/>
+  
+    <text x="70" y="128" fill="#1b263b" font-size="22" font-weight="800" letter-spacing="4">LIFEPILOT</text>
+    <text x="70" y="192" fill="#1b263b" font-size="58" font-weight="900">LifePilot</text>
+    <foreignObject x="70" y="218" width="610" height="88">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#1b263b;font:700 24px Segoe UI, Arial, sans-serif;line-height:1.25">A friendly planner for turning messy tasks into a realistic day, both on web and terminal.</div>
+    </foreignObject>
+  <rect x="735" y="70" width="315" height="215" rx="22" fill="#57cc99" opacity=".95"/><path d="M780 120 H1010 M780 165 H990 M780 210 H950" stroke="#1b263b" stroke-width="10" stroke-linecap="round"/><circle cx="760" cy="120" r="10" fill="#ffb703"/><circle cx="760" cy="165" r="10" fill="#ffb703"/><circle cx="760" cy="210" r="10" fill="#ffb703"/>
+  <text x="70" y="315" fill="#1b263b" font-size="18" font-weight="800" opacity=".72">Portfolio README identity 05</text>
+</svg>

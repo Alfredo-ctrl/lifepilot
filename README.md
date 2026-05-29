@@ -1,3 +1,39 @@
+<!-- portfolio:start -->
+<p align="center">
+  <img src="assets/readme-hero.svg" alt="LifePilot banner" width="100%" />
+</p>
+
+<h1 align="center">LifePilot</h1>
+
+<p align="center"><strong>A friendly planner for turning messy tasks into a realistic day, both on web and terminal.</strong></p>
+
+<p align="center">
+<img alt="focus: daily planning" src="https://img.shields.io/badge/focus-daily%20planning-ffb703?style=for-the-badge&labelColor=1b263b" />
+  <img alt="interfaces: web + CLI" src="https://img.shields.io/badge/interfaces-web%20%2B%20CLI-ffb703?style=for-the-badge&labelColor=1b263b" />
+  <img alt="tone: friendly" src="https://img.shields.io/badge/tone-friendly-ffb703?style=for-the-badge&labelColor=1b263b" />
+</p>
+
+## Daily Cockpit
+
+LifePilot is intentionally softer than a productivity dashboard: it feels like a calm planning desk instead of a corporate tool.
+
+## What It Solves
+
+Breaks tasks into priorities, time blocks, and a schedule that is realistic enough to actually follow.
+
+## Terminal Use
+
+`npm install -g github:Alfredo-ctrl/lifepilot` then run `lifepilot --demo`.
+
+## Portfolio Note
+
+This repository has its own visual identity inside the portfolio. The goal is that every project feels like a different product, not another copy of the same template.
+<!-- portfolio:end -->
+
+---
+
+## Existing Project Notes
+
 # lifepilot
 
 lifepilot is a friendly planning tool that turns a messy list of tasks into a clear daily schedule. It is designed for students, freelancers, builders, and anyone who starts the day with too many things floating around.
