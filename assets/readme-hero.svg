@@ -1,13 +1,46 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LifePilot banner">
-  <rect width="1200" height="360" rx="34" fill="#fff9e8"/>
-  <path d="M0 310 C180 220 310 395 510 286 C706 180 872 336 1200 170" stroke="#ffb703" stroke-width="2" opacity=".28"/>
-  <path d="M0 58 H1200 M120 0 V360 M280 0 V360 M440 0 V360 M600 0 V360 M760 0 V360 M920 0 V360 M1080 0 V360" stroke="#1b263b" opacity=".08"/>
-  
-    <text x="70" y="128" fill="#1b263b" font-size="22" font-weight="800" letter-spacing="4">LIFEPILOT</text>
-    <text x="70" y="192" fill="#1b263b" font-size="58" font-weight="900">LifePilot</text>
-    <foreignObject x="70" y="218" width="610" height="88">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#1b263b;font:700 24px Segoe UI, Arial, sans-serif;line-height:1.25">A friendly planner for turning messy tasks into a realistic day, both on web and terminal.</div>
-    </foreignObject>
-  <rect x="735" y="70" width="315" height="215" rx="22" fill="#57cc99" opacity=".95"/><path d="M780 120 H1010 M780 165 H990 M780 210 H950" stroke="#1b263b" stroke-width="10" stroke-linecap="round"/><circle cx="760" cy="120" r="10" fill="#ffb703"/><circle cx="760" cy="165" r="10" fill="#ffb703"/><circle cx="760" cy="210" r="10" fill="#ffb703"/>
-  <text x="70" y="315" fill="#1b263b" font-size="18" font-weight="800" opacity=".72">Portfolio README identity 05</text>
+<svg width="1280" height="320" viewBox="0 0 1280 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LifePilot Scheduling Engine Architectural Banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#05080F"/>
+      <stop offset="100%" stop-color="#0B1120"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" stroke="#1E293B" stroke-opacity="0.4" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" rx="10" fill="url(#bg)"/>
+  <rect width="1280" height="320" rx="10" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1278" height="318" rx="9" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Top Telemetry Bar -->
+  <line x1="0" y1="44" x2="1280" y2="44" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="44" y="28" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">SYS.ID // LIFEPILOT</text>
+  <text x="1236" y="28" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#38BDF8" letter-spacing="1.5">DOMAIN // PRODUCTIVITY SYSTEMS & DUAL-SURFACE ARCHITECTURE</text>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(44, 84)">
+    <text x="0" y="0" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="700" fill="#38BDF8" letter-spacing="2">WEB WORKBENCH // TERMINAL CLI // TASK PRIORITIZATION</text>
+    <text x="0" y="46" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#F8FAFC" letter-spacing="-0.8">LifePilot Scheduling Engine</text>
+    <text x="0" y="80" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="400" fill="#94A3B8">Deterministic task scheduling and time-blocking engine operating across web and command-line interfaces.</text>
+
+    <!-- 4 Metric Boxes -->
+    <g transform="translate(0, 112)">
+      <rect x="0" y="0" width="280" height="68" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="18" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1">SURFACES</text>
+      <text x="18" y="50" font-family="'JetBrains Mono', Consolas, monospace" font-size="19" font-weight="800" fill="#38BDF8">Web + CLI</text>
+
+      <rect x="300" y="0" width="280" height="68" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="318" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1">SCHEDULER</text>
+      <text x="318" y="50" font-family="'JetBrains Mono', Consolas, monospace" font-size="19" font-weight="800" fill="#10B981">Priority Queue</text>
+
+      <rect x="600" y="0" width="280" height="68" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="618" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1">STORAGE</text>
+      <text x="618" y="50" font-family="'JetBrains Mono', Consolas, monospace" font-size="19" font-weight="800" fill="#818CF8">Local State</text>
+
+      <rect x="900" y="0" width="292" height="68" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="918" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1">EXPORT</text>
+      <text x="918" y="50" font-family="'JetBrains Mono', Consolas, monospace" font-size="19" font-weight="800" fill="#F8FAFC">Structured JSON</text>
+    </g>
+  </g>
 </svg>
