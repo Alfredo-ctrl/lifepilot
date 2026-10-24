@@ -1,38 +1,15 @@
-<!-- portfolio:start -->
 <p align="center">
-  <img src="assets/readme-hero.svg" alt="LifePilot banner" width="100%" />
+  <img src="assets/readme-hero.svg" alt="LifePilot Scheduling Engine Architectural Banner" width="100%" />
 </p>
 
-<h1 align="center">LifePilot</h1>
-
-<p align="center"><strong>A friendly planner for turning messy tasks into a realistic day, both on web and terminal.</strong></p>
-
 <p align="center">
-<img alt="focus: daily planning" src="https://img.shields.io/badge/focus-daily%20planning-ffb703?style=for-the-badge&labelColor=1b263b" />
-  <img alt="interfaces: web + CLI" src="https://img.shields.io/badge/interfaces-web%20%2B%20CLI-ffb703?style=for-the-badge&labelColor=1b263b" />
-  <img alt="tone: friendly" src="https://img.shields.io/badge/tone-friendly-ffb703?style=for-the-badge&labelColor=1b263b" />
+  <img src="https://img.shields.io/badge/ARCHITECTURE-WEB%20%2B%20CLI-0F172A?style=flat-square&labelColor=05080F&color=0284C7" alt="ARCHITECTURE: WEB + CLI" />
+  <img src="https://img.shields.io/badge/ENGINE-TIME-BLOCKING-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="ENGINE: TIME-BLOCKING" />
+  <img src="https://img.shields.io/badge/STORAGE-LOCAL%20PERSISTENCE-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="STORAGE: LOCAL PERSISTENCE" />
+  <img src="https://img.shields.io/badge/STACK-JS%20%2B%20PYTHON-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="STACK: JS + PYTHON" />
 </p>
-
-## Daily Cockpit
-
-LifePilot is intentionally softer than a productivity dashboard: it feels like a calm planning desk instead of a corporate tool.
-
-## What It Solves
-
-Breaks tasks into priorities, time blocks, and a schedule that is realistic enough to actually follow.
-
-## Terminal Use
-
-`npm install -g github:Alfredo-ctrl/lifepilot` then run `lifepilot --demo`.
-
-## Portfolio Note
-
-This repository has its own visual identity inside the portfolio. The goal is that every project feels like a different product, not another copy of the same template.
-<!-- portfolio:end -->
 
 ---
-
-## Existing Project Notes
 
 # lifepilot
 
